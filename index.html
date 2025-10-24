@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deogracious Rotich | Portfolio</title>
+  <title>Deogracious Rotich | Academic Writing & Research Services</title>
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -44,8 +44,22 @@
     }
     header h1 { font-size:3rem; margin-bottom:10px; letter-spacing:1px; }
     header p { font-size:1.2rem; color:#dce3f0; }
+    .tagline {
+      font-size: 1.4rem;
+      margin-top: 20px;
+      font-weight: 500;
+      color: #f0a500;
+    }
 
-    nav { text-align:center; padding:15px 0; background: rgba(119,141,169,0.85); backdrop-filter: blur(5px); }
+    nav { 
+      text-align:center; 
+      padding:15px 0; 
+      background: rgba(119,141,169,0.85); 
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
     nav a { color:white; margin:0 25px; font-weight:600; font-size:1rem; }
     nav a:hover { color:#f0a500; }
 
@@ -64,6 +78,7 @@
 
     h2 { border-left:6px solid #1b263b; padding-left:12px; color:#1b263b; margin-bottom:20px; font-size:1.8rem; }
     h3 { color:#1b263b; margin-top:25px; font-size:1.3rem; }
+    h4 { color:#415a77; margin-top:20px; font-size:1.1rem; }
 
     ul { list-style-type:"✔ "; padding-left:30px; margin-top:10px; }
     li { margin-bottom:8px; font-size:1.05rem; }
@@ -75,6 +90,90 @@
     section ul li a:hover {
       color:#f0a500;
       transform: scale(1.05);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #415a77;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .service-card h4 {
+      margin-top: 0;
+      color: #1b263b;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .tool-item {
+      background: #f0f2f5;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .testimonial {
+      background: #f0f2f5;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid #f0a500;
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial .client {
+      font-weight: 700;
+      color: #1b263b;
+    }
+    .testimonial .project {
+      color: #415a77;
+      font-size: 0.9rem;
+    }
+
+    .cta-box {
+      text-align: center;
+      background: #1b263b;
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    .cta-box h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #f0a500;
+      color: #1b263b;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 700;
+      margin-top: 15px;
+      transition: all 0.3s;
+    }
+    .cta-button:hover {
+      background: #ffb82e;
+      transform: scale(1.05);
+      color: #1b263b;
     }
 
     form { display:flex; flex-direction:column; gap:15px; margin-top:20px; }
@@ -109,41 +208,150 @@
       backdrop-filter: blur(5px);
       border-radius: 20px 20px 0 0;
     }
+
+    @media (max-width: 768px) {
+      header h1 { font-size:2.2rem; }
+      .tagline { font-size:1.1rem; }
+      nav a { margin:0 10px; font-size:0.9rem; }
+      section { padding:40px 20px; }
+      .services-grid, .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Deogracious Rotich</h1>
-    <p>Medical Writer | Researcher | Content Creator</p>
+    <p>Academic Writer | Researcher | Systematic Review Specialist</p>
+    <div class="tagline">Crafting Clear, Credible, and Publication-Ready Academic Work</div>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#tools">Tools</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Deogracious Rotich, a passionate medical writer and researcher with a focus on healthcare, scientific communication, and evidence-based content creation.</p>
+    <p>I'm Deogracious Rotich, a dedicated academic writer and researcher with 3+ years of experience helping students, researchers, and professionals craft high-quality, publication-ready academic work.</p>
+    
+    <p>Struggling with research deadlines or journal submission stress? I specialize in turning complex research into clear, credible academic content that meets the highest standards of peer-reviewed publications.</p>
+    
+    <h3>Why Clients Trust My Work</h3>
+    <ul>
+      <li>Expertise in health sciences, biomedical research & public health</li>
+      <li>Quality-first, peer-review-level standards</li>
+      <li>Deadline-driven, with consistent updates and reliability</li>
+      <li>100+ academic projects successfully completed</li>
+    </ul>
   </section>
 
-  <section id="skills">
-    <h2>Skills & Work Samples</h2>
-    <ul>
-      <li>Medical & Scientific Writing</li>
-      <li>Systematic Reviews and Literature Research</li>
-      <li>Academic Editing and Proofreading</li>
-      <li>Healthcare Blog and Article Writing</li>
-      <li>Data Interpretation and Report Writing</li>
-    </ul>
+  <section id="services">
+    <h2>How I Can Help</h2>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <h4>Systematic Reviews</h4>
+        <p>PRISMA-compliant systematic, scoping, and narrative reviews that journals actually accept.</p>
+      </div>
+      
+      <div class="service-card">
+        <h4>Literature Reviews</h4>
+        <p>Save hours with comprehensive literature reviews (systematic, thematic, or narrative).</p>
+      </div>
+      
+      <div class="service-card">
+        <h4>Research Papers & Proposals</h4>
+        <p>Craft strong, methodology-based research papers and proposals tailored to your needs.</p>
+      </div>
+      
+      <div class="service-card">
+        <h4>Editing & Formatting</h4>
+        <p>Submit with confidence - flawless APA/MLA/Harvard formatting and zero plagiarism.</p>
+      </div>
+    </div>
+    
+    <div class="cta-box">
+      <h3>Ready to make your research stress-free and submission-ready?</h3>
+      <p>Let's discuss how I can help with your next academic project.</p>
+      <a href="#contact" class="cta-button">Get in Touch Today</a>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Tools I Use with Confidence</h2>
+    
+    <h3>Writing & Editing</h3>
+    <div class="tools-grid">
+      <div class="tool-item">MS Word</div>
+      <div class="tool-item">Google Docs</div>
+      <div class="tool-item">LaTeX</div>
+      <div class="tool-item">Grammarly Premium</div>
+    </div>
+    
+    <h3>Citation & Referencing</h3>
+    <div class="tools-grid">
+      <div class="tool-item">Zotero</div>
+      <div class="tool-item">Mendeley</div>
+      <div class="tool-item">EndNote</div>
+    </div>
+    
+    <h3>Plagiarism & AI Detection</h3>
+    <div class="tools-grid">
+      <div class="tool-item">Turnitin (on request)</div>
+      <div class="tool-item">Grammarly</div>
+      <div class="tool-item">Copyleaks</div>
+    </div>
+    
+    <h3>Data Analysis (Basic)</h3>
+    <div class="tools-grid">
+      <div class="tool-item">Excel</div>
+      <div class="tool-item">SPSS</div>
+      <div class="tool-item">GraphPad Prism</div>
+    </div>
+    
+    <h3>Academic Databases</h3>
+    <div class="tools-grid">
+      <div class="tool-item">PubMed</div>
+      <div class="tool-item">Google Scholar</div>
+      <div class="tool-item">Scopus</div>
+      <div class="tool-item">Web of Science</div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio & Testimonials</h2>
+    
+    <div class="testimonial">
+      <p>"It was nice working with Deogracious."</p>
+      <div class="client">Client Feedback</div>
+      <div class="project">Systematic Review on Trends in Synthesis of Nanoparticles in Africa</div>
+      <div class="rating">Rating: 5.0/5.0 | Jan 25, 2025 - Aug 5, 2025</div>
+    </div>
+    
     <h3>Featured Work</h3>
     <ul>
       <li><a href="#" target="_blank">Systematic Review on Silver Nanoparticles in Africa</a></li>
       <li><a href="#" target="_blank">Book Chapter: Bioactive Components of Antimicrobial Nutraceuticals</a></li>
       <li><a href="#" target="_blank">Medical Blog: Understanding HER2 in Breast Cancer</a></li>
     </ul>
+    
+    <h3>Skills</h3>
+    <div class="tools-grid">
+      <div class="tool-item">Topic Research</div>
+      <div class="tool-item">Research Paper Writing</div>
+      <div class="tool-item">Literature Review</div>
+      <div class="tool-item">Thesis Writing</div>
+      <div class="tool-item">Data Analysis</div>
+      <div class="tool-item">Copywriting</div>
+      <div class="tool-item">Blog Writing</div>
+      <div class="tool-item">Ghostwriting</div>
+    </div>
   </section>
 
   <section id="contact">
@@ -152,7 +360,8 @@
     <form action="mailto:kiprutodeo@gmail.com" method="post" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="text" name="subject" placeholder="Project Type (e.g., Systematic Review, Research Paper)">
+      <textarea name="message" rows="5" placeholder="Tell me about your project and requirements" required></textarea>
       <button type="submit">Send Message</button>
     </form>
     <p style="margin-top:15px;">Or email me directly at 
@@ -161,7 +370,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Deogracious Rotich | All rights reserved</p>
+    <p>© 2025 Deogracious Rotich | Academic Writing & Research Services | All rights reserved</p>
   </footer>
 
   <script>
