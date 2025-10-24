@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deogracious Rotich | Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
   <style>
-    /* ===== GLOBAL STYLES ===== */
     * { box-sizing: border-box; margin:0; padding:0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.7;
       color:#222;
       background: linear-gradient(270deg, #1b263b, #415a77, #778da9, #f0a500);
@@ -26,7 +32,6 @@
     a { text-decoration:none; color:#415a77; transition:0.3s; }
     a:hover { color:#f0a500; }
 
-    /* ===== HEADER ===== */
     header {
       color:white;
       text-align:center;
@@ -35,16 +40,15 @@
       backdrop-filter: blur(5px);
       border-radius: 0 0 20px 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-family: 'Montserrat', sans-serif;
     }
     header h1 { font-size:3rem; margin-bottom:10px; letter-spacing:1px; }
     header p { font-size:1.2rem; color:#dce3f0; }
 
-    /* ===== NAVIGATION ===== */
     nav { text-align:center; padding:15px 0; background: rgba(119,141,169,0.85); backdrop-filter: blur(5px); }
     nav a { color:white; margin:0 25px; font-weight:600; font-size:1rem; }
     nav a:hover { color:#f0a500; }
 
-    /* ===== SECTIONS ===== */
     section {
       opacity:0;
       transform: translateY(50px);
@@ -61,11 +65,9 @@
     h2 { border-left:6px solid #1b263b; padding-left:12px; color:#1b263b; margin-bottom:20px; font-size:1.8rem; }
     h3 { color:#1b263b; margin-top:25px; font-size:1.3rem; }
 
-    /* ===== SKILLS LIST ===== */
     ul { list-style-type:"✔ "; padding-left:30px; margin-top:10px; }
     li { margin-bottom:8px; font-size:1.05rem; }
 
-    /* ===== WORK SAMPLE HOVER ===== */
     section ul li a {
       transition: transform 0.3s, color 0.3s;
       display:inline-block;
@@ -75,7 +77,6 @@
       transform: scale(1.05);
     }
 
-    /* ===== CONTACT FORM ===== */
     form { display:flex; flex-direction:column; gap:15px; margin-top:20px; }
     input, textarea {
       padding:14px;
@@ -98,7 +99,6 @@
     }
     button:hover { background:#415a77; transform: scale(1.03); }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align:center;
       padding:30px;
@@ -113,26 +113,22 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1>Deogracious Rotich</h1>
     <p>Medical Writer | Researcher | Content Creator</p>
   </header>
 
-  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About Me</h2>
     <p>Hello! I'm Deogracious Rotich, a passionate medical writer and researcher with a focus on healthcare, scientific communication, and evidence-based content creation.</p>
   </section>
 
-  <!-- SKILLS SECTION -->
   <section id="skills">
     <h2>Skills & Work Samples</h2>
     <ul>
@@ -150,7 +146,6 @@
     </ul>
   </section>
 
-  <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact Me</h2>
     <p>If you'd like to work with me or have any questions, feel free to reach out!</p>
@@ -165,12 +160,10 @@
     </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 Deogracious Rotich | All rights reserved</p>
   </footer>
 
-  <!-- ===== SCROLL ANIMATION SCRIPT ===== -->
   <script>
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver((entries, observer) => {
