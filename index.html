@@ -49,6 +49,32 @@
       color: white;
       margin-top: 40px;
     }
+    a {
+      color: #1b263b;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #415a77;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #1b263b;
+    }
   </style>
 </head>
 <body>
@@ -82,4 +108,24 @@
     <ul>
       <li><a href="#" target="_blank">Systematic Review on Silver Nanoparticles in Africa</a></li>
       <li><a href="#" target="_blank">Book Chapter: Bioactive Components of Antimicrobial Nutraceuticals</a></li>
-      <li><a href="#" target="_blank">Medical Blog: Understanding HER2 in Breast Cancer</a></_
+      <li><a href="#" target="_blank">Medical Blog: Understanding HER2 in Breast Cancer</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to work with me or have any questions, feel free to reach out!</p>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:15px;">Or email me directly at <a href="mailto:your-email@example.com">your-kiprutodeo@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Deogracious Rotich | All rights reserved</p>
+  </footer>
+</body>
+</html>
