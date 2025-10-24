@@ -44,12 +44,7 @@
     }
     header h1 { font-size:3rem; margin-bottom:10px; letter-spacing:1px; }
     header p { font-size:1.2rem; color:#dce3f0; }
-    .tagline {
-      font-size: 1.4rem;
-      margin-top: 20px;
-      font-weight: 500;
-      color: #f0a500;
-    }
+    .tagline { font-size: 1.4rem; margin-top: 20px; font-weight: 500; color: #f0a500; }
 
     nav { 
       text-align:center; 
@@ -92,7 +87,7 @@
       transform: scale(1.05);
     }
 
-    .services-grid {
+    .services-grid, .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
@@ -146,6 +141,11 @@
     .testimonial .project {
       color: #415a77;
       font-size: 0.9rem;
+    }
+    .testimonial .rating {
+      color: #1b263b;
+      font-size: 0.9rem;
+      margin-top: 5px;
     }
 
     .cta-box {
@@ -214,7 +214,7 @@
       .tagline { font-size:1.1rem; }
       nav a { margin:0 10px; font-size:0.9rem; }
       section { padding:40px 20px; }
-      .services-grid, .tools-grid {
+      .services-grid, .tools-grid, .portfolio-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -233,6 +233,7 @@
     <a href="#services">Services</a>
     <a href="#tools">Tools</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#process">Process</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -253,29 +254,24 @@
 
   <section id="services">
     <h2>How I Can Help</h2>
-    
     <div class="services-grid">
       <div class="service-card">
         <h4>Systematic Reviews</h4>
         <p>PRISMA-compliant systematic, scoping, and narrative reviews that journals actually accept.</p>
       </div>
-      
       <div class="service-card">
         <h4>Literature Reviews</h4>
         <p>Save hours with comprehensive literature reviews (systematic, thematic, or narrative).</p>
       </div>
-      
       <div class="service-card">
         <h4>Research Papers & Proposals</h4>
         <p>Craft strong, methodology-based research papers and proposals tailored to your needs.</p>
       </div>
-      
       <div class="service-card">
         <h4>Editing & Formatting</h4>
         <p>Submit with confidence - flawless APA/MLA/Harvard formatting and zero plagiarism.</p>
       </div>
     </div>
-    
     <div class="cta-box">
       <h3>Ready to make your research stress-free and submission-ready?</h3>
       <p>Let's discuss how I can help with your next academic project.</p>
@@ -285,7 +281,6 @@
 
   <section id="tools">
     <h2>Tools I Use with Confidence</h2>
-    
     <h3>Writing & Editing</h3>
     <div class="tools-grid">
       <div class="tool-item">MS Word</div>
@@ -293,28 +288,24 @@
       <div class="tool-item">LaTeX</div>
       <div class="tool-item">Grammarly Premium</div>
     </div>
-    
     <h3>Citation & Referencing</h3>
     <div class="tools-grid">
       <div class="tool-item">Zotero</div>
       <div class="tool-item">Mendeley</div>
       <div class="tool-item">EndNote</div>
     </div>
-    
     <h3>Plagiarism & AI Detection</h3>
     <div class="tools-grid">
       <div class="tool-item">Turnitin (on request)</div>
       <div class="tool-item">Grammarly</div>
       <div class="tool-item">Copyleaks</div>
     </div>
-    
     <h3>Data Analysis (Basic)</h3>
     <div class="tools-grid">
       <div class="tool-item">Excel</div>
       <div class="tool-item">SPSS</div>
       <div class="tool-item">GraphPad Prism</div>
     </div>
-    
     <h3>Academic Databases</h3>
     <div class="tools-grid">
       <div class="tool-item">PubMed</div>
@@ -326,21 +317,28 @@
 
   <section id="portfolio">
     <h2>Portfolio & Testimonials</h2>
-    
-    <div class="testimonial">
-      <p>"It was nice working with Deogracious."</p>
-      <div class="client">Client Feedback</div>
-      <div class="project">Systematic Review on Trends in Synthesis of Nanoparticles in Africa</div>
-      <div class="rating">Rating: 5.0/5.0 | Jan 25, 2025 - Aug 5, 2025</div>
+    <div class="portfolio-grid">
+      <div class="testimonial">
+        <p>"It was nice working with Deogracious."</p>
+        <div class="client">Client Feedback</div>
+        <div class="project">Systematic Review on Trends in Synthesis of Nanoparticles in Africa</div>
+        <div class="rating">Rating: 5.0/5.0 | Jan 25, 2025 - Aug 5, 2025</div>
+      </div>
+      <div class="testimonial">
+        <p>"Excellent research and formatting skills."</p>
+        <div class="client">Client Feedback</div>
+        <div class="project">Medical Blog on HER2 Breast Cancer</div>
+        <div class="rating">Rating: 5.0/5.0 | Feb 2025</div>
+      </div>
     </div>
-    
+
     <h3>Featured Work</h3>
     <ul>
       <li><a href="#" target="_blank">Systematic Review on Silver Nanoparticles in Africa</a></li>
       <li><a href="#" target="_blank">Book Chapter: Bioactive Components of Antimicrobial Nutraceuticals</a></li>
       <li><a href="#" target="_blank">Medical Blog: Understanding HER2 in Breast Cancer</a></li>
     </ul>
-    
+
     <h3>Skills</h3>
     <div class="tools-grid">
       <div class="tool-item">Topic Research</div>
@@ -352,6 +350,17 @@
       <div class="tool-item">Blog Writing</div>
       <div class="tool-item">Ghostwriting</div>
     </div>
+  </section>
+
+  <section id="process">
+    <h2>My Process</h2>
+    <ul>
+      <li>Step 1: Understand your research goals & journal requirements</li>
+      <li>Step 2: Conduct thorough literature search & screening</li>
+      <li>Step 3: Synthesize evidence & structure arguments</li>
+      <li>Step 4: Write, edit, and format your paper for submission</li>
+      <li>Step 5: Deliver final publication-ready document with references</li>
+    </ul>
   </section>
 
   <section id="contact">
