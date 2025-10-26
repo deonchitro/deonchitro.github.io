@@ -328,6 +328,16 @@
       display: none;
     }
 
+    .form-loading {
+      background: #2196f3;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
+
     /* Portfolio filtering */
     .portfolio-filters {
       display: flex;
@@ -737,6 +747,10 @@
       <button type="submit">Discuss Research Collaboration</button>
     </form>
     
+    <div class="form-loading" id="form-loading">
+      Sending your message... Please wait.
+    </div>
+    
     <div class="form-success" id="form-success">
       Thank you for your interest in research collaboration! I'll contact you within 24 hours to schedule our discussion.
     </div>
@@ -785,11 +799,12 @@
       });
     });
 
-    // Form validation
+    // Form handling
     const contactForm = document.getElementById('contact-form');
     const formSuccess = document.getElementById('form-success');
+    const formLoading = document.getElementById('form-loading');
     
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
       let isValid = true;
@@ -798,6 +813,10 @@
       document.querySelectorAll('.form-error').forEach(error => {
         error.style.display = 'none';
       });
+      
+      // Hide previous messages
+      formSuccess.style.display = 'none';
+      formLoading.style.display = 'none';
       
       // Validate name
       const nameInput = document.querySelector('input[name="name"]');
@@ -829,18 +848,46 @@
       }
       
       if (isValid) {
-        // In a real implementation, you would submit the form here
-        // For demo purposes, we'll just show the success message
-        formSuccess.style.display = 'block';
-        contactForm.reset();
+        // Show loading message
+        formLoading.style.display = 'block';
+        formLoading.scrollIntoView({ behavior: 'smooth' });
         
-        // Scroll to success message
-        formSuccess.scrollIntoView({ behavior: 'smooth' });
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          formSuccess.style.display = 'none';
-        }, 5000);
+        try {
+          // Create FormData object
+          const formData = new FormData(contactForm);
+          
+          // Submit to Formspree
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            // Success - show success message
+            formLoading.style.display = 'none';
+            formSuccess.style.display = 'block';
+            contactForm.reset();
+            
+            // Scroll to success message
+            formSuccess.scrollIntoView({ behavior: 'smooth' });
+            
+            // Hide success message after 8 seconds
+            setTimeout(() => {
+              formSuccess.style.display = 'none';
+            }, 8000);
+          } else {
+            // Error handling
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          // Fallback: allow normal form submission
+          formLoading.style.display = 'none';
+          console.log('AJAX failed, submitting normally');
+          contactForm.submit();
+        }
       }
     });
   </script>
